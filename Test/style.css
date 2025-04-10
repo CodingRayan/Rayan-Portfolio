@@ -1,0 +1,203 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background: linear-gradient(45deg, #121212, #1a1a1a, #121212);
+    background-size: 400% 400%;
+    animation: gradientBackground 8s ease infinite;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.7;
+    scroll-behavior: smooth;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  header {
+    background: #111;
+    padding: 20px 0;
+    text-align: center;
+    border-bottom: 2px solid #444;
+  }
+  
+  h1 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 3.5rem;
+    color: #00ffea;
+    animation: fadeInDown 1s ease-in-out, pulse 1.5s infinite alternate, glowText 1.5s ease-in-out infinite;
+    text-shadow: 0 0 10px #00ffea, 0 0 20px #00ffea, 0 0 30px #00ffea;
+  }
+  
+  .contact {
+    font-size: 1rem;
+    color: #bbb;
+    margin-top: 5px;
+  }
+  
+  nav ul {
+    list-style: none;
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+  }
+  
+  nav a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+    transition: 0.3s;
+    padding: 5px 10px;
+    border-radius: 8px;
+    text-shadow: 0 0 10px #00ffea;
+  }
+  
+  nav a:hover {
+    background: #00ffea;
+    color: #000;
+    transform: scale(1.1);
+    animation: hoverEffect 0.4s ease-in-out, glowHover 0.5s ease-in-out;
+  }
+  
+  nav a:active {
+    transform: scale(0.98);
+    text-shadow: none;
+  }
+  
+  .section {
+    padding: 80px 20px;
+    text-align: center;
+    animation: fadeIn 0.5s ease-in-out;
+    display: none;
+  }
+  
+  .container {
+    max-width: 1000px;
+    margin: auto;
+  }
+  
+  h2 {
+    font-size: 2.8rem;
+    margin-bottom: 20px;
+    color: #fff;
+    font-family: 'Orbitron', sans-serif;
+    animation: fadeInUp 1s ease-in-out, glowText 1.5s ease-in-out infinite;
+    text-shadow: 0 0 10px #00ffea, 0 0 20px #00ffea;
+  }
+  
+  h3 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #00ffea;
+    animation: fadeInUp 1s ease-in-out, glowText 1.5s ease-in-out infinite;
+    text-shadow: 0 0 10px #00ffea, 0 0 20px #00ffea;
+  }
+  
+  .highlight {
+    font-size: 1.4rem;
+    color: white;
+    margin: 15px auto;
+    line-height: 1.8;
+    max-width: 800px;
+    opacity: 0;
+    animation: fadeInText 1.5s ease-in-out forwards;
+    text-shadow: 0 0 10px #00ffea, 0 0 20px #00ffea;
+  }
+  
+  a {
+    color: #00ffea;
+    text-decoration: underline;
+    transition: 0.3s;
+    text-shadow: 0 0 10px #00ffea;
+  }
+  
+  a:hover {
+    color: #00ffea;
+    text-decoration: none;
+    animation: glowHover 0.5s ease-in-out;
+  }
+  
+  footer {
+    text-align: center;
+    padding: 20px;
+    background: #111;
+    color: #666;
+    font-size: 0.9rem;
+    border-top: 2px solid #444;
+    margin-top: auto;
+  }
+  
+  .fadeIn {
+    opacity: 0;
+    animation: fadeInEffect 1.5s forwards;
+  }
+  
+  @keyframes fadeInEffect {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  @keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-50px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  @keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  @keyframes fadeInText {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  @keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+  }
+  
+  @keyframes hoverEffect {
+    0% { transform: scale(1); }
+    100% { transform: scale(1.1); }
+  }
+  
+  @keyframes glowText {
+    0% { text-shadow: 0 0 10px #00ffea, 0 0 20px #00ffea, 0 0 30px #00ffea; }
+    50% { text-shadow: 0 0 30px #ff00ff, 0 0 40px #ff00ff, 0 0 50px #ff00ff; }
+    100% { text-shadow: 0 0 10px #00ffea, 0 0 20px #00ffea, 0 0 30px #00ffea; }
+  }
+  
+  @keyframes glowHover {
+    0% { text-shadow: 0 0 10px #00ffea, 0 0 20px #00ffea; }
+    50% { text-shadow: 0 0 30px #ff00ff, 0 0 40px #ff00ff; }
+    100% { text-shadow: 0 0 10px #00ffea, 0 0 20px #00ffea; }
+  }
+  
+  @keyframes gradientBackground {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+  
+  .box {
+    border: 2px solid #444;
+    padding: 20px;
+    margin-top: 30px;
+    border-radius: 8px;
+    animation: fadeInUp 0.6s ease-in-out, glowBox 2s infinite alternate;
+    box-shadow: 0 0 20px #00ffea, 0 0 30px #00ffea;
+  }
+  
+  @keyframes glowBox {
+    0% { box-shadow: 0 0 20px #00ffea, 0 0 30px #00ffea; }
+    50% { box-shadow: 0 0 20px #ff00ff, 0 0 30px #ff00ff; }
+    100% { box-shadow: 0 0 20px #00ffea, 0 0 30px #00ffea; }
+  }
+  
